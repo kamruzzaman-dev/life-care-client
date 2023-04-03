@@ -8,7 +8,6 @@ export const userApi = createApi({
     baseUrl: env.BASE_URL,
     // mode: "cors",
     prepareHeaders: (headers) => {
-      // console.log(getLocalStorage("testingToken"))
       headers.set("authorization", getLocalStorage("testingToken"));
       return headers;
     },
@@ -16,26 +15,26 @@ export const userApi = createApi({
   tagTypes: ["User", "adminUser", "Validate"], // automatic-data fetching
   endpoints: (builder) => ({
     getLoginUser: builder.query({
-      query: () => "/api/get_user",
+      query: () => "/users/api/get_user",
       providesTags: ["User"], // automatic-data fetching
     }),
     addUser: builder.mutation({
       // user register
       query: (body) => ({
-        url: "/public/api/register",
+        url: "/users/api/register",
         method: "POST",
         body,
       }),
       invalidatesTags: ["User"], // automatic-data fetching
     }),
     getValidateEmail: builder.query({
-      query: (email) => `/public/api/check_email/${email}`,
+      query: (email) => `/users/api/check_email/${email}`,
       providesTags: ["Validate"], // automatic-data fetching
     }),
     addLogin: builder.mutation({
       // user login
       query: (body) => ({
-        url: "/public/api/login",
+        url: "/users/api/login",
         method: "POST",
         body,
       }),

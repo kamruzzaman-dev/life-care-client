@@ -29,13 +29,13 @@ export const Validate = (values) => {
   // ) {
   //   errors.password = "Please write atleast one letter";
   // }
-  else if (!symbols.test(values.password)) {
-    errors.password = "Please write atleast one special character";
-  } else if (!numbers.test(values.password)) {
-    errors.password = "Please write atleast one number";
-  } else if (!isNaN(values.password)) {
-    errors.password = "Please write atlaest one character";
-  }
+  // else if (!symbols.test(values.password)) {
+  //   errors.password = "Please write atleast one special character";
+  // } else if (!numbers.test(values.password)) {
+  //   errors.password = "Please write atleast one number";
+  // } else if (!isNaN(values.password)) {
+  //   errors.password = "Please write atlaest one character";
+  // }
   // confirm password validation
   if (!values.confirm_password) {
     errors.confirm_password = "Confirm Password is required";

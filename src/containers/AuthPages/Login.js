@@ -66,7 +66,7 @@ const Login = () => {
         ...value,
         email: value.email.toLowerCase(),
       };
-      console.log(logData);
+      // console.log(logData);
       await addLogin(logData);
     }
   };
