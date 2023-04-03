@@ -1,0 +1,20 @@
+const root = ["Manufacturing","Other","Service"]
+const Manufacturing = ["Construction materials","Electronics and Optics","Food and Beverage","Furniture","Machinery","Metalworking","Plastic and Rubber","Printing","Textile and Clothing","Wood"]
+const Other=["Creative industries","Energy technology","Environment"]
+const Service=["Business services","Engineering","Information Technology and Telecommunications","Tourism","Translation services","Transport and Logistics"]
+
+
+const Food_and_Beverage =["Bakery & confectionery products","Beverages","Fish & fish products","Meat & meat products","Milk & dairy products","Other","Sweets & snack food"]
+const Furniture=["Bathroom/sauna","Bedroom","Children's room","Kitchen","Living room","Office","Other (Furniture)","Outdoor","Project furniture"]
+const Machinery=["Machinery components","Machinery equipment/tools","Manufacture of machinery","Maritime"]
+const Metalworking=["Construction of metal structures","Houses and buildings","Metal products","Metal works"]
+const Plastic_and_Rubber= ["Packaging", "Plastic goods","Plastic processing technology","Plastic profiles"]
+const Printing =["Advertising","Book/Periodicals printing","Labelling and packaging printing"]
+const Textile_and_Clothing=["Clothing","Textile"]
+const Wood= ["Other (Wood)","Wooden building materials","Wooden houses"]
+const Information_Technology_and_Telecommunications=["Data processing, Web portals, E-marketing","Programming, Consultancy","Software, Hardware","Telecommunications"]
+const Transport_and_Logistics=["Air","Rail","Road","Water"]
+
+const Maritime=["Aluminium and steel workboats","Boat/Yacht building","Ship repair and conversion"]
+const Plastic_processing_technology=["Blowing","Moulding","Plastics welding and processing"]
+const Metal_works=["CNC-machining","Forgings Fasteners","Gas, Plasma, Laser cutting","MIG, TIG, Aluminum welding"]
