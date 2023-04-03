@@ -13,7 +13,7 @@ import {
 } from "../../Services/userApi";
 import { Notification } from "../../components/ToastNotification";
 import AuthCardLayout from "./AuthCardLayout";
-import { getLocalStorage } from "../../utils/function/localStorage";
+import { getLocalStorage, savedLocalStorage } from "../../utils/function/localStorage";
 const Register = () => {
   const [OTPup, setOTPup] = useState(false);
   const location = useLocation();
@@ -49,8 +49,10 @@ const Register = () => {
 
   useEffect(() => {
     if (data?.message) {
+      // navigate("/login");
       Notification(data?.message, "success");
-      navigate("/login");
+      navigate("/dashboard");
+      savedLocalStorage("testingToken", data?.token);
     } else {
       Notification(error?.data?.message, "error");
     }

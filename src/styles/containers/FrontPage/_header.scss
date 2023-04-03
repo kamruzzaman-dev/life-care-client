@@ -246,7 +246,7 @@
           .life_care_project_front_nav_link {
             font-size: 13px;
             font-weight: 600;
-            color: #fff;
+            color: #c4a50c;
             padding: 10px;
             @include breakpoints(semiTablet) {
               padding: 10px 8px;
@@ -255,7 +255,6 @@
             transition: all 0.3s ease-in-out;
             &:hover {
               border-bottom: 2px solid #7b5eea;
-              color: #7b5eea;
             }
           }
           .active {

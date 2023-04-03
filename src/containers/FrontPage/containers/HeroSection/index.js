@@ -1,19 +1,26 @@
 import React from "react";
-import heroimg from "../../../../assets/logo.png";
+import Lottie from "lottie-react";
+import heroSection from "../../../../assets/lottie/heroSection.json";
 const HeroSection = () => {
   return (
     <div className="life_care_project_frontpage_wrapper" id="home">
       <div className="landingPage_container container hero_section">
         <div className="life_care_project_front_hero_section">
           <div className="life_care_project_front_hero_content">
-            <h2>hello du sumu</h2>
+            <h2>save people life</h2>
             <p>
-              lorem lorem ipsum dolor sit amet, consectetur adip lorem ipsum
-              dolor sit amet, consectetur adip lorem
+              here you can find blood donors and you also a become donar.you can
+              be join as a doctor.
             </p>
+            <a>
+              <span>Become </span>BloodDonar
+            </a>
+            <a>
+              Blood Donors <span> search</span>
+            </a>
           </div>
           <div className="life_care_project_front_hero_img">
-            <img src={heroimg} width="100%" alt="heroimage" />
+            <Lottie animationData={heroSection} loop={true} />
           </div>
         </div>
       </div>

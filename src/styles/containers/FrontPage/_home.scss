@@ -1,7 +1,7 @@
 @import "../../responsive/breakpoints";
 .life_care_project_frontpage_wrapper {
-  background-color: #7FBCD2 !important;
-  padding-top: 100px;
+  background-color: #ffffff !important;
+  padding-top: 50px;
   .life_care_project_front_hero_section {
     font-family: $font-family;
     display: flex;
@@ -18,7 +18,7 @@
         margin-bottom: 50px;
       }
       h2 {
-        color: #fff;
+        color: #000000;
         font-size: 50px;
         font-weight: 600;
         text-transform: capitalize;
@@ -32,10 +32,10 @@
         }
       }
       p {
-        color: #fff;
+        color: #000000;
         font-size: 16px;
-        margin: 20px 0 !important;
-        margin-bottom: 40px !important;
+        // margin: 20px 0 !important;
+        margin-bottom: 20px !important;
         font-weight: 600;
         @include breakpoints(tablet) {
           font-size: 13px;
@@ -46,10 +46,11 @@
         transition: all 0.3s ease-in-out;
         background-color: #e8c743;
         border-radius: 2px;
-        color: #7b5eea !important;
+        color: #1c1b20 !important;
         text-transform: capitalize;
         font-weight: 600;
         font-size: 16px;
+        margin-right: 10px;
         &:hover {
           color: #fff !important;
           background-color: #c4a50c;

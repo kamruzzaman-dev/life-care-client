@@ -1,9 +1,10 @@
 @import "../../responsive/breakpoints";
 .life_care_project_dashboard_login_page_wrapper {
   height: 100vh;
-  background-color: #7FBCD2;
+  background-color: #fff;
   padding-top: 108px;
   padding-bottom: 120px;
+  margin-top: 100px;
   @include breakpoints(largeMobile) {
     height: auto;
   }
