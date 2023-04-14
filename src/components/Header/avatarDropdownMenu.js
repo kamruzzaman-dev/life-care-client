@@ -36,7 +36,7 @@ const AvatarDropdownMenu = ({ setOpenMenu, logout, data }) => {
             <h4>{data?.name}</h4>
           </div>
         </div>
-        {/* {avatarMenu
+        {avatarMenu
           .filter((pt) => pt?.permission?.includes(data?.role))
           ?.map((drop) => {
             return (
@@ -51,7 +51,7 @@ const AvatarDropdownMenu = ({ setOpenMenu, logout, data }) => {
                 </CustomLink>
               </li>
             );
-          })} */}
+          })}
         <li className="submenu_list">
           <CustomLink href="#" className="submenu_Dark_mode">
             <span>Dark mode</span>
@@ -73,12 +73,12 @@ const AvatarDropdownMenu = ({ setOpenMenu, logout, data }) => {
 
 export default AvatarDropdownMenu;
 
-// const avatarMenu = [
-//   {
-//     id: "my7s88ersr",
-//     menu: "my profile",
-//     icon: <FiUser />,
-//     route: "/dashboard/donor-info",
-//     permission: ["donor"],
-//   },
-// ];
+const avatarMenu = [
+  {
+    id: "my7s88ersr",
+    menu: "my profile",
+    icon: <FiUser />,
+    route: "/dashboard/donor-info",
+    permission: ["donor"],
+  },
+];

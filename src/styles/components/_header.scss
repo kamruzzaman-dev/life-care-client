@@ -461,8 +461,8 @@
                   button {
                     background-color: $bg-white;
                     position: relative;
-                    width: 35px;
-                    height: 35px;
+                    width: 30px;
+                    height: 30px;
                     border-radius: 50px;
                     display: flex;
                     align-items: center;
@@ -484,7 +484,7 @@
                       height: 40px;
                     }
                     svg {
-                      font-size: 1.8rem;
+                      font-size: 1.5rem;
                       color: $text-navicon-color;
                     }
                     &:hover {
