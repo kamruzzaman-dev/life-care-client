@@ -9,11 +9,11 @@ const HeroSection = () => {
           <div className="life_care_project_front_hero_content">
             <h2>save people life</h2>
             <p>
-              here you can find blood donors and you also a become donar.you can
+              here you can find blood donors and you also a become donor.you can
               be join as a doctor.
             </p>
             <a>
-              <span>Become </span>BloodDonar
+              <span>Become </span>Blooddonor
             </a>
             <a>
               Blood Donors <span> search</span>
