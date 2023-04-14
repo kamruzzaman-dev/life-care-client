@@ -5,7 +5,7 @@ const Footer = () => {
     <footer style={{ padding: "0px 10px", textAlign: "center" }}>
       <p className="footer-text">
         Copyright © 2022, Powered By{" "}
-        <a href="https://tesing.com/">md kamruzzaman</a>{" "}
+        <a href="#">md kamruzzaman</a>{" "}
       </p>
     </footer>
   );

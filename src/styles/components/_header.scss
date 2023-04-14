@@ -442,6 +442,59 @@
                     color: $text-primary;
                   }
                 }
+                .submenu_Dark_mode {
+                  color: $text-p-color;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 5px 10px;
+                  text-transform: capitalize;
+                  font-size: 13px;
+                  transition: all 0.3s ease-in-out;
+                  font-weight: 500;
+                  align-items: center;
+                  cursor: pointer;
+                  &:hover {
+                    background-color: $bg-sidebar-hover;
+                    color: $text-primary;
+                  }
+                  button {
+                    background-color: $bg-white;
+                    position: relative;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: $box-shadow-navicon;
+                    transition: all 0.3s ease-in-out;
+                    background: $bg-white !important;
+                    border: none;
+                    @include breakpoints(tablet) {
+                      border: $border-header;
+                    }
+                    &:hover {
+                      background: $bg-navicon;
+                    }
+                    @include breakpoints(tablet) {
+                      width: 40px;
+                      height: 40px;
+                    }
+                    svg {
+                      font-size: 1.8rem;
+                      color: $text-navicon-color;
+                    }
+                    &:hover {
+                      background: $bg-navicon !important;
+                    }
+                    @include breakpoints(tablet) {
+                      border: $border-header;
+                    }
+                  }
+                }
               }
               .submenu_list_static {
                 border-bottom: $border-header;

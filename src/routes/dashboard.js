@@ -12,7 +12,9 @@ const Dashboard = () => {
     <>
       {/* <BrowserRouter> */}
       <div className="home_wrapper" show-menu={show ? "false" : "true"}>
-        {/* sidebar */}
+        {/**************************
+         * sidebar *
+         * **************************/}
         <div className="sidebar_wrapper">
           <Sidebar
             sideBarShow={setShow}
@@ -34,12 +36,14 @@ const Dashboard = () => {
         )}
         {/* body container */}
         <div className="body_content_wrapper">
-          {/* header */}
+          {/**************************
+           * header *
+           * **************************/}
           <Header setShow={setShow} show={show} />
           <div
             className="content_wrapper"
             style={{
-              minHeight: "80vh",
+              minHeight: "77vh",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -47,7 +51,9 @@ const Dashboard = () => {
               overflow: "hidden",
             }}
           >
-            {/* Routers for every page render on the UI */}
+            {/*******************************************
+             * Routers for every page render on the UI *
+             * ******************************************/}
             <AppContent />
           </div>
           <Footer />

@@ -22,25 +22,25 @@ const Header = ({ show, setShow }) => {
   useClickOutside(profileRef, () => setOpenMenu(false));
   // mobile show menu
   const [showMenu, setShowMenu] = useState(false);
-  getLocalStorage("dark-mode");
+  // getLocalStorage("dark-mode");
   const [value, setValue] = useLocalStorage("dark-mode", "light");
-  const handleThemeMode = () => {
-    if (value === "dark") {
-      setValue("light");
-    } else {
-      setValue("dark");
-    }
-  };
+  // const handleThemeMode = () => {
+  //   if (value === "dark") {
+  //     setValue("light");
+  //   } else {
+  //     setValue("dark");
+  //   }
+  // };
 
-  useEffect(() => {
-    if (value === "dark") {
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-    } else {
-      document.body.classList.remove("dark");
-      document.body.classList.add("light");
-    }
-  }, [value]);
+  // useEffect(() => {
+  //   if (value === "dark") {
+  //     document.body.classList.add("dark");
+  //     document.body.classList.remove("light");
+  //   } else {
+  //     document.body.classList.remove("dark");
+  //     document.body.classList.add("light");
+  //   }
+  // }, [value]);
   // handle logout
   const handleLogout = () => {
     removeLocalStorage("testingToken");
@@ -76,13 +76,13 @@ const Header = ({ show, setShow }) => {
           </div>
           <div className={`life_care_project_header_menu ${showMenu ? "active_show" : ""}`}>
             <ul className="life_care_project_header_menu_lists">
-              <li className="life_care_project_header_menu_list">
+              {/* <li className="life_care_project_header_menu_list">
                 <div className="msg_icon theme_icon" id="theme_icon">
                   <button onClick={handleThemeMode} id="theme_icon">
                     {value === "dark" ? <FiSun /> : <MdOutlineDarkMode />}
                   </button>
                 </div>
-              </li>
+              </li> */}
               <li ref={profileRef} className="life_care_project_header_menu_list">
                 <img
                   src={data?.data?.avatar ? data?.data?.avatar : avatar}

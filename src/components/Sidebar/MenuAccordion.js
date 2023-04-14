@@ -14,6 +14,9 @@ const MenuAccordion = ({ d, sideBarShow, logout, userRole }) => {
   };
   const device = useBreakpoints();
   const perRoute = d.filter((rt) => rt?.permission?.includes(userRole));
+  console.log(userRole);
+  console.log(d);
+  console.log(perRoute);
 
   return (
     <>
