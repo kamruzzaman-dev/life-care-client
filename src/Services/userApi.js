@@ -40,6 +40,22 @@ export const userApi = createApi({
       }),
       invalidatesTags: ["User"], // automatic-data fetching
     }),
+    editUser: builder.mutation({
+      query: (body) => ({
+        url: "/secure/api/update_user_info",
+        method: "PUT",
+        body,
+      }),
+      invalidatesTags: ["User"],
+    }),
+    editImage: builder.mutation({
+      query: (body) => ({
+        url: "/secure/api/update_profile_pic",
+        method: "PUT",
+        body,
+      }),
+      invalidatesTags: ["User"],
+    }),
   }),
 });
 
@@ -48,4 +64,6 @@ export const {
   useGetValidateEmailQuery,
   useAddUserMutation,
   useAddLoginMutation,
+  useEditUserMutation,
+  useEditImageMutation,
 } = userApi;

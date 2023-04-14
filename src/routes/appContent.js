@@ -14,8 +14,7 @@ const AppContent = () => {
     }
   }, [navigate, token]);
 
-  const perRoute = routers?.filter((rt) => rt?.permission?.includes(data?.data?.role[0]));
-  console.log(data?.data?.role)
+  const perRoute = routers?.filter((rt) => rt?.permission?.includes(data?.data?.role));
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
