@@ -24,17 +24,19 @@ const Profile = () => {
     useEditUserMutation();
 
   const [data, setData] = useState({
-    blood_group: userData?.data?.bloodGroup,
+    bloodGroup: userData?.data?.bloodGroup,
     eligibility: userData?.data?.eligibility,
     lastDonationDate: userData?.data?.lastDonationDate,
     user_id: userData?.data?.user_id,
     name: userData?.data?.name,
-    mobile: userData?.data?.phoneNumber,
+    phoneNumber: userData?.data?.phoneNumber,
     gender: userData?.data?.gender,
     location: userData?.data?.location,
     email: userData?.data?.email,
   });
   const [countries, setCountries] = useState([]);
+  const [bloodGroups, setBloodGroups] = useState(["A+","A-","B+","B-","O+","O-","AB+","AB-"]);
+  const [eligibilitys, setEligibilitys] = useState(["Eligible","Not Eligible"]);
 
   useEffect(() => {
     fetch("https://restcountries.com/v2/all")
@@ -100,7 +102,7 @@ const Profile = () => {
           <div className="life_care_project_profile_short_info">
             <div className="life_care_project_profile_photo">
               <img
-                src={data?.data?.profilePic ? data?.data?.profilePic : avatar}
+                src={userData?.data?.avatar ? userData?.data?.avatar : avatar}
                 width="100%"
                 alt="img"
               />
@@ -134,23 +136,28 @@ const Profile = () => {
         <div className="life_care_project_userupdate_field">
           <form onSubmit={handleSubmit}>
             <div className="form_group">
-              <Input
-                label="Blood Group"
-                type="text"
-                value={data.blood_group}
-                name="blood_group"
-                onChange={handleChange}
-                inputGroupClass="left"
-              />
-              <Input
-                label="Eligibility"
-                type="text"
-                value={data.eligibility}
-                name="eligibility"
-                onChange={handleChange}
-                inputGroupClass="right"
-                disabled={true}
-              />
+               <div className="form_group_special_container">
+                <Select
+                  className="special_input"
+                  label="Blood Group"
+                  value={data.bloodGroup}
+                  name="bloodGroup"
+                  onChange={handleChange}
+                  options={bloodGroups}
+                  inputGroupClass="left"
+                />
+              </div>
+              <div className="form_group_special_container">
+                <Select
+                  className="special_input"
+                  label="Eligibility"
+                  value={data.eligibility}
+                  name="eligibility"
+                  onChange={handleChange}
+                  options={eligibilitys}
+                  inputGroupClass="right"
+                />
+              </div>
             </div>
             <div className="form_group">
               <Input
@@ -165,8 +172,8 @@ const Profile = () => {
               <Input
                 label="Mobile"
                 type="text"
-                value={data.mobile}
-                name="mobile"
+                value={data.phoneNumber}
+                name="phoneNumber"
                 onChange={handleChange}
                 inputGroupClass="right"
               />

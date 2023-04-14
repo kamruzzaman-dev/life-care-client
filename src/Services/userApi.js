@@ -42,7 +42,7 @@ export const userApi = createApi({
     }),
     editUser: builder.mutation({
       query: (body) => ({
-        url: "/secure/api/update_user_info",
+        url: "/users/api/update_user_info",
         method: "PUT",
         body,
       }),
@@ -50,7 +50,7 @@ export const userApi = createApi({
     }),
     editImage: builder.mutation({
       query: (body) => ({
-        url: "/secure/api/update_profile_pic",
+        url: "/users/api/update_profile_pic",
         method: "PUT",
         body,
       }),
