@@ -22,10 +22,23 @@ export const bloodApi = createApi({
       query: () => "/api/donation/getBloodRequestReceivedFromRequester",
       providesTags: ["donor", "admin"],
     }),
+    getBloodRequest: builder.query({
+      query: () => "/api/request-blood",
+      providesTags: ["donor", "admin"],
+    }),
     addDonationRequestUpdate: builder.mutation({
       // user register
       query: (body) => ({
         url: `/api/donation/${body._id}`,
+        method: "PUT",
+        body,
+      }),
+      invalidatesTags: ["donor", "admin"],
+    }),
+    editBloodRequest: builder.mutation({
+      // user register
+      query: (body) => ({
+        url: `/api/request-blood/${body._id}`,
         method: "PUT",
         body,
       }),
@@ -38,4 +51,6 @@ export const {
   useGetBloodRequestSendToDonorQuery,
   useAddDonationRequestUpdateMutation,
   useGetBloodRequestReceivedFromRequesterQuery,
+  useGetBloodRequestQuery,
+  useEditBloodRequestMutation,
 } = bloodApi;
