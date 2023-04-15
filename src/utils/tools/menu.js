@@ -1,9 +1,16 @@
 import { AiOutlineDashboard } from "react-icons/ai";
 import { RiProfileLine } from "react-icons/ri";
-import { MdOutlineBloodtype } from "react-icons/md";
+import { MdOutlineBloodtype, MdDashboard } from "react-icons/md";
 import { BiDonateBlood } from "react-icons/bi";
 export const menus = [
   // ************************************* common dashboard menu ************************/
+  {
+    id: "y4h935g783b548",
+    menu: "dashboard",
+    icon: <MdDashboard />,
+    route: "/dashboard",
+    permission: ["donor"],
+  },
   {
     id: "7dfsrs8srf",
     menu: "profile",
