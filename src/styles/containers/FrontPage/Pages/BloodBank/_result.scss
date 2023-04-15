@@ -1,0 +1,142 @@
+@import "../../../../responsive/breakpoints";
+.center_element {
+  text-align: center;
+}
+.life_care_project_donor_search_result {
+  //   background: linear-gradient(#0e0529, #1e0b56);
+  border-top: 1px solid #585757;
+  padding: 20px 0px;
+  .life_care_project_donor_search_content {
+    .title {
+      h2 {
+        font-size: 20px;
+        color: #000;
+        font-weight: 600;
+        font-family: $font-family;
+        text-align: center;
+        text-transform: uppercase;
+        @media screen and(max-width: 490px) {
+          font-size: 15px;
+        }
+      }
+    }
+    .life_care_project_table_donors_card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      grid-gap: 20px;
+      margin-top: 60px;
+      @include breakpoints(semiTablet) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+      }
+      @include breakpoints(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+      }
+      @media screen and(max-width: 490px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .table_sale {
+        justify-self: auto;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        width: 260px;
+        @include breakpoints(laptop) {
+          padding: 20px 20px;
+        }
+        @include breakpoints(tablet) {
+          padding: 20px;
+        }
+        &:hover {
+          transform: translateY(-10px);
+          background-color: #7b5eea;
+          box-shadow: 0 8px 60px -6px rgb(123 94 234 / 70%);
+          .button {
+            a {
+              background-color: #fff !important;
+              color: #7b5eea !important;
+            }
+          }
+          p {
+            span {
+              background-color: #fff;
+              color: #7b5eea;
+            }
+            .active {
+              color: #fff;
+            }
+          }
+        }
+        .table_content {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          .table_content_left {
+            position: relative;
+            img {
+              border-radius: 50%;
+              width: 80px;
+            }
+            .bloodGroup {
+              position: absolute;
+              right: 0px;
+              bottom: 10px;
+              padding: 3px;
+              background-color: #cf3c3ca9;
+              color: #fff;
+              border-radius: 50%;
+            }
+          }
+          .table_content_right {
+            padding-left: 10px;
+            .table_content_details {
+              padding: 2px 0px;
+              display: flex;
+              align-content: start !important;
+              justify-content: start;
+              text-align: left;
+              color: #fff;
+              p {
+                padding-left: 5px;
+              }
+              svg {
+                margin-left: 0;
+                margin-right: auto;
+                margin-top: 5px;
+                width: 30px;
+              }
+            }
+          }
+        }
+        .horizontal {
+          position: relative;
+          width: 100%;
+          border-bottom: 1px solid #ffffff;
+          opacity: 0.4;
+          margin: 10px 0;
+        }
+        .button {
+          margin-top: 15px !important;
+          a {
+            padding: 8px 80px !important;
+            transition: all 0.3s ease-in-out;
+            background-color: #7b5eea;
+            border-radius: 25px;
+            color: #fff !important;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 13px;
+            box-shadow: 0 8px 6px -6px rgb(0 0 0 / 30%);
+          }
+        }
+      }
+      .dark_blue {
+        background-color: #ff7b7bbb;
+      }
+    }
+  }
+}

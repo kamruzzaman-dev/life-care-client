@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Login from "../containers/AuthPages/Login";
 import Register from "../containers/AuthPages/Register";
 import Dashboard from "./dashboard";
+import BloodBank from "../containers/FrontPage/Pages/BloodBank/index";
+import Appointment from "../containers/FrontPage/Pages/Appointment/Appointment";
 import FrontPage from "./frontPage";
 
 
@@ -13,6 +15,8 @@ const Routers = () => {
       <Routes>
         <Route path="/*" index element={<FrontPage />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/blood-bank" element={<BloodBank />} />
+        <Route path="/appointment" element={<Appointment />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         {/* <Route path="*" element={<Page404/>} /> */}
