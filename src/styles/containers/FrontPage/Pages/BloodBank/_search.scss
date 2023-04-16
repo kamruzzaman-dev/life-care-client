@@ -1,0 +1,123 @@
+@import "../../../../responsive/breakpoints";
+.life_care_project_donor_search {
+  padding: 0 40px;
+  max-width: 1080px;
+  margin: auto;
+  min-height: 30vh;
+  @include breakpoints(tablet) {
+    padding: 0 50px;
+    min-height: 70vh;
+  }
+  @include breakpoints(mdlgMobile) {
+    padding: 0 10px;
+  }
+  padding: 50px 10px;
+  display: flex;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  .life_care_project_donor_search_left {
+    width: 50%;
+    @include breakpoints(portraitTablet) {
+      width: 100%;
+    }
+    form {
+      .form_group {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        @include breakpoints(portraitTablet) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-row-gap: 12px;
+        }
+        position: relative;
+        .input_group {
+          position: relative;
+        }
+        // span {
+        //   position: absolute;
+        //   top: 32px;
+        //   right: 8px;
+        //   z-index: 999;
+        //   font-size: 20px;
+        //   svg {
+        //     color: #fff;
+        //   }
+        // }
+        .right {
+          margin-right: 19px;
+        }
+        label {
+          color: #000000;
+          font-size: 15px;
+          font-weight: 600;
+          @include breakpoints(tablet) {
+            font-size: 14px;
+          }
+        }
+        .special_input {
+          width: 50%;
+          @include breakpoints(portraitTablet) {
+            width: 100%;
+          }
+          padding: 10px 8px;
+          border: none;
+          outline: none;
+          border-radius: 3px;
+          background-color: rgba(123, 94, 234, 0.08);
+          color: #9fa4a6;
+          &:focus {
+            background-color: rgba(123, 94, 234, 0.7);
+            color: #fff;
+            &::placeholder {
+              color: #fff;
+            }
+          }
+          &:active {
+            background-color: rgba(123, 94, 234, 0.7);
+            color: #fff;
+          }
+          &::placeholder {
+            text-transform: uppercase;
+            color: #9fa4a6;
+            font-size: 11px;
+          }
+        }
+        .special_input_date {
+          padding-right: 0px !important;
+        }
+      }
+      .submit_button {
+        button {
+          background-color: #7b5eea;
+          padding: 10px 12px;
+          width: 50%;
+          @include breakpoints(portraitTablet) {
+            width: 100%;
+          }
+          border-radius: 3px;
+          border: none;
+          font-size: 15px;
+          font-weight: 600;
+          text-transform: capitalize;
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          margin-top: 10px !important;
+          &:hover {
+            background-color: #7b5eeaa6;
+            box-shadow: $box-shadow;
+          }
+        }
+      }
+    }
+  }
+  .life_care_project_donor_search_right {
+    padding-right: 30px;
+    width: 50%;
+    @include breakpoints(portraitTablet) {
+      display: none;
+    }
+  }
+}

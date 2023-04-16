@@ -44,6 +44,20 @@ export const bloodApi = createApi({
       }),
       invalidatesTags: ["donor", "admin"],
     }),
+    addBloodDonorRequest: builder.mutation({
+      // user register
+      query: (body) => ({
+        url: `/api/donors?bloodGroup=${encodeURIComponent(
+          body.bloodGroup
+        )}&location=${encodeURIComponent(
+          body.location
+        )}&date=${encodeURIComponent(
+          body.date
+        )}&eligibility=${encodeURIComponent(body.eligibility)}`,
+        method: "GET",
+      }),
+      invalidatesTags: ["donor", "admin"],
+    }),
   }),
 });
 
@@ -53,4 +67,5 @@ export const {
   useGetBloodRequestReceivedFromRequesterQuery,
   useGetBloodRequestQuery,
   useEditBloodRequestMutation,
+  useAddBloodDonorRequestMutation,
 } = bloodApi;
