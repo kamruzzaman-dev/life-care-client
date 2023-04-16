@@ -1,11 +1,7 @@
 import React from "react";
 
 const NoDonorFound = () => {
-  return (
-    <div>
-      <h1>no donor found</h1>
-    </div>
-  );
+  return <div className="life_care_project_donor_search_result_not_found"></div>;
 };
 
 export default NoDonorFound;

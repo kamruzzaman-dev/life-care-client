@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import SearchDonor from "../../../../../assets/lottie/search_donor.json";
 import Button from "../../../../../components/Button";
-import CardLayout from "../../../../../components/CardLayout";
-import Input from "../../../../../components/Input";
-import Loading from "../../../../../components/Loading/Loading";
 import Select from "../../../../../components/Select";
 import CustomDatePicker from "../../../../../components/DatePicker";
 
@@ -28,7 +25,7 @@ const Search = ({ addBloodDonorRequest, isLoading }) => {
         <Lottie
           style={{ width: "60%", marginLeft: "auto", marginRight: "0px" }}
           animationData={SearchDonor}
-          loop={false}
+          loop={true}
         />
       </div>
       <div className="life_care_project_donor_search_left">

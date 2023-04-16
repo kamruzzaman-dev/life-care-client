@@ -14,9 +14,13 @@ const Results = ({ resData }) => {
     <div className="life_care_project_donor_search_result">
       <div className="landingPage_container container">
         <div className="life_care_project_donor_search_content">
-          <div className="title">
-            <h2 id="packages">There are some donor's Details</h2>
-          </div>
+          {resData?.length > 0 ? (
+            <div className="title">
+              <h2 id="packages">some donor's</h2>
+            </div>
+          ) : (
+            <></>
+          )}
           <div className="life_care_project_table_donors_card">
             {resData?.map((d) => (
               <Card
@@ -50,15 +54,15 @@ const Card = ({
   Eligible,
   name,
   location,
-  avatar,
   bloodGroup,
   id,
+  image,
 }) => {
   return (
     <div className={`table_sale ${className}`}>
       <div className="table_content">
         <div className="table_content_left">
-          <img src={avatar ? avatar : Avatar} alt="" />
+          <img src={image ? image : Avatar} alt="" />
           <span className="bloodGroup">{bloodGroup}</span>
         </div>
         <div className="table_content_right">
