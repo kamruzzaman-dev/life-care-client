@@ -83,7 +83,7 @@ const Card = ({
       <div className="horizontal"></div>
       <div className="button">
         <CustomLink
-          to="/login"
+          to={"/donor/" + id}
           className="card_btn"
           style={{ backgroundColor: `${buttonStyle}` }}
         >

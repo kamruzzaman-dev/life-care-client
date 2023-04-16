@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 
-const Appointment = () => {
+const AboutContact = () => {
   return (
     <>
       <Header hidePackageRoute />
@@ -9,4 +9,4 @@ const Appointment = () => {
   );
 };
 
-export default Appointment;
+export default AboutContact;
