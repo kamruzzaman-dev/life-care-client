@@ -3,8 +3,8 @@
   text-align: center;
 }
 .life_care_project_donor_search_result {
-  //   background: linear-gradient(#0e0529, #1e0b56);
-  border-top: 1px solid #585757;
+  background: linear-gradient(#fce6e6, #c9baf5);
+  // border-top: 1px solid #585757;
   padding: 20px 0px;
   .life_care_project_donor_search_content {
     .title {
@@ -102,6 +102,7 @@
               color: #fff;
               p {
                 padding-left: 5px;
+                text-transform: capitalize;
               }
               svg {
                 margin-left: 0;

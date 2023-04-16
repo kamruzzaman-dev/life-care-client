@@ -35,16 +35,16 @@
         .input_group {
           position: relative;
         }
-        span {
-          position: absolute;
-          top: 32px;
-          right: 8px;
-          z-index: 999;
-          font-size: 20px;
-          svg {
-            color: #fff;
-          }
-        }
+        // span {
+        //   position: absolute;
+        //   top: 32px;
+        //   right: 8px;
+        //   z-index: 999;
+        //   font-size: 20px;
+        //   svg {
+        //     color: #fff;
+        //   }
+        // }
         .right {
           margin-right: 19px;
         }
@@ -85,7 +85,7 @@
           }
         }
         .special_input_date {
-          padding-right:  0px !important;
+          padding-right: 0px !important;
         }
       }
       .submit_button {

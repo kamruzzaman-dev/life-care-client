@@ -84,7 +84,7 @@ const Login = () => {
       <Header />
       <div className="life_care_project_dashboard_login_page_wrapper">
         <AuthCardLayout
-          style={{ backgroundColor: "rgb(0 0 0 / 17%)" }}
+          style={{ backgroundColor: "rgb(0 0 0 / 17%)" }}life_care_project_dashboard_login_page_wrapper
           className="life_care_project_dashboard_login_card life_care_project_all_card"
         >
           <div className="life_care_project_section_title">
@@ -103,6 +103,7 @@ const Login = () => {
                   value={value.email}
                   className="userid_input input_field"
                   inputGroupClass="right"
+                  isRequired={true}
                 />
               </div>
               <div className="form_group" style={{ display: "inherit" }}>
@@ -115,8 +116,9 @@ const Login = () => {
                   value={value.password}
                   className="password_input input_field"
                   inputGroupClass="right"
+                  isRequired={true}
                 />
-                <span
+                <span className="show_password_icon"
                   style={{ marginTop: "0px" }}
                   onClick={() => setShowPassword(!showPassword)}
                 >

@@ -70,3 +70,16 @@ export const storeValidate = (values) => {
   }
   return errors;
 };
+
+/* ------------------------------------------------------- */
+
+// support ticket
+export const donorReqValidate = (values) => {
+  let errors = {};
+  if (!values.bloodGroup) {
+    errors.bloodGroup = "Blood Group is required";
+  } else if (!values.location) {
+    errors.location = "Location is required";
+  }
+  return errors;
+};
