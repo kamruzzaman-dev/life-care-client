@@ -87,18 +87,15 @@ const DonorProfile = () => {
           <div className="last_donor_info">
             <h1>beneficiary feed back</h1>
             <div className="last_donor_list">
-              <span>
-                <img src="" alt="" />
-                <p>name</p>
-              </span>
-              <span>
-                <img src="" alt="" />
-                <p>name</p>
-              </span>
-              <span>
-                <img src="" alt="" />
-                <p>name</p>
-              </span>
+              {[1, 2, 3, 4, 5, 6]?.map((d) => (
+                <div className="review_card">
+                  <div className="card_title">
+                    <img src={bgimage} alt="" />
+                    <h4>Imamul rahman</h4>
+                  </div>
+                  <p>Thanks to him to gave me the blood at the right moment </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
