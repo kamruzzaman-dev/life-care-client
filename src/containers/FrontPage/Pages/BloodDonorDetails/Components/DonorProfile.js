@@ -61,24 +61,31 @@ const DonorProfile = () => {
         <div className="life_care_project_donor_profile_right">
           <div className="profile_send_message">
             <form onSubmit={handleSubmit}>
-              <TextArea
-                label="Your Message"
-                name="message"
-                cols="30"
-                rows="10"
-                onChange={(e) => setData({ ...data, message: e.target.value })}
-                value={data.message}
-                className="question_field"
-                placeholder="Write your message..."
-                isRequired={true}
-              ></TextArea>
+              <div className="form_group">
+                {" "}
+                <div className="form_group text_area left">
+                  <TextArea
+                    label="Your Message"
+                    name="message"
+                    cols="100"
+                    rows="10"
+                    onChange={(e) =>
+                      setData({ ...data, message: e.target.value })
+                    }
+                    value={data.message}
+                    className="text_area"
+                    placeholder="Write your message..."
+                    isRequired={true}
+                  ></TextArea>
+                </div>
+              </div>
               <Button type="submit" className="submit_btn">
                 {isLoading ? "Loading..." : "submit"}
               </Button>
             </form>
           </div>
           <div className="last_donor_info">
-            <h1>donor title</h1>
+            <h1>beneficiary feed back</h1>
             <div className="last_donor_list">
               <span>
                 <img src="" alt="" />
